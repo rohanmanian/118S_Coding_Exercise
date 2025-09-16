@@ -14,6 +14,7 @@ house_data = {
         1240000, 1649000, 1299000, 1048000, 1088000, 1890000,
         1299000, 1250000]
 }
+#Recorded from San Jose listings on Zillow
 df = pd.DataFrame(house_data)
 # Features and target
 X = df[['square_footage', 'location']]
