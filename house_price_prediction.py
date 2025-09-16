@@ -6,14 +6,15 @@ from sklearn.preprocessing import OneHotEncoder
 from sklearn.compose import ColumnTransformer
 from sklearn.pipeline import Pipeline
 # Generate sample data
-data = {
-'square_footage': [1500, 2000, 1800, 2500, 2200, 1700, 3000, 1900, 2100, 2600],
-'location': ['Downtown', 'Suburb', 'Downtown', 'Rural', 'Suburb', 'Downtown',
-'Rural', 'Suburb', 'Downtown', 'Rural'],
-'price': [300000, 350000, 320000, 280000, 360000, 310000, 400000, 340000,
-330000, 290000]
+house_data = {
+'square_footage': [1316, 1672, 1760, 1376, 1630, 930, 1316, 1574, 2068, 846, 948, 2153, 2068, 1513],
+'location': ['Downtown', 'Suburb', 'Downtown', 'Suburb', 'Downtown', 'Suburb', 
+             'Downtown', 'Suburb', 'Downtown', 'Suburb', 'Downtown', 'Suburb', 'Downtown', 'Suburb'],
+'price': [1240000, 2295000, 1098000, 1445000, 1249888, 1195000,
+        1240000, 1649000, 1299000, 1048000, 1088000, 1890000,
+        1299000, 1250000]
 }
-df = pd.DataFrame(data)
+df = pd.DataFrame(house_data)
 # Features and target
 X = df[['square_footage', 'location']]
 y = df['price']
