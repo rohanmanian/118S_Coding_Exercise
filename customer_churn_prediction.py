@@ -14,6 +14,7 @@ data = {
     'region': ['South', 'North', 'East', 'West', 'West', 'South', 'East', 'North', 'West', 'East', 'East', 'South', 'West', 'West', 'North'],
     'churn': [0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0]
 }
+#Gemini randomized data set
 df = pd.DataFrame(data)
 # Features and target
 X = df[['age', 'monthly_usage_hours', 'purchase_amount', 'customer_service_calls',
