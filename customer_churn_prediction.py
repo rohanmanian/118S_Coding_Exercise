@@ -7,13 +7,12 @@ from sklearn.compose import ColumnTransformer
 from sklearn.pipeline import Pipeline
 # Generate sample customer data
 data = {
-'age': [25, 34, 45, 28, 52, 36, 41, 29, 47, 33],
-'monthly_usage_hours': [10, 50, 20, 15, 60, 30, 25, 12, 55, 40],
-'purchase_amount': [100, 250, 150, 80, 300, 200, 175, 90, 280, 220],
-'customer_service_calls': [5, 2, 8, 6, 1, 3, 7, 4, 0, 2],
-'region': ['North', 'South', 'West', 'East', 'South', 'North', 'West', 'East',
-'South', 'North'],
-'churn': [1, 0, 1, 1, 0, 0, 1, 1, 0, 0] # 1 = churned, 0 = not churned
+    'age': [39, 33, 41, 50, 32, 32, 50, 42, 30, 40, 30, 30, 37, 15, 17],
+    'monthly_usage_hours': [21, 14, 34, 16, 8, 51, 26, 31, 8, 21, 31, 12, 35, 20, 25],
+    'purchase_amount': [154, 338, 198, 120, 261, 108, 215, 53, 100, 214, 255, 212, 191, 177, 89],
+    'customer_service_calls': [2, 3, 6, 4, 0, 4, 3, 2, 5, 6, 5, 2, 3, 4, 5],
+    'region': ['South', 'North', 'East', 'West', 'West', 'South', 'East', 'North', 'West', 'East', 'East', 'South', 'West', 'West', 'North'],
+    'churn': [0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0]
 }
 df = pd.DataFrame(data)
 # Features and target
