@@ -8,7 +8,8 @@ df = pd.read_csv("random_customer_data.csv")
 #ChatGPT Random Dataset Generation
 # Preprocess data: Select numerical features and scale them
 features = ['annual_spending', 'purchase_frequency', 'age']
-X = df[features]
+# NEW: ensure numeric dtypes (minor hygiene)
+X = df[features].astype(float).copy()
 scaler = StandardScaler()
 X_scaled = scaler.fit_transform(X)
 # Determine optimal number of clusters using elbow method
