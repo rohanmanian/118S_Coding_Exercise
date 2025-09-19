@@ -7,6 +7,9 @@ from sklearn.compose import ColumnTransformer
 from sklearn.pipeline import Pipeline
 # Generate sample data
 df = pd.read_csv("random_house_data.csv")
+df = df.dropna()
+# Cast 'location' to category (saves memory, no logic change)
+df['location'] = df['location'].astype('category')
 #ChatGPT Random Dataset Generation
 # Look at the first few rows
 print(df.head())
