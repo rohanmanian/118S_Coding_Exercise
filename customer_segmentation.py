@@ -5,6 +5,7 @@ from sklearn.preprocessing import StandardScaler
 import matplotlib.pyplot as plt
 # Generate sample customer data
 df = pd.read_csv("random_customer_data.csv")
+#ChatGPT Random Dataset Generation
 # Preprocess data: Select numerical features and scale them
 features = ['annual_spending', 'purchase_frequency', 'age']
 X = df[features]
