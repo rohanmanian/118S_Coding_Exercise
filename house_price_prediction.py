@@ -6,16 +6,10 @@ from sklearn.preprocessing import OneHotEncoder
 from sklearn.compose import ColumnTransformer
 from sklearn.pipeline import Pipeline
 # Generate sample data
-house_data = {
-'square_footage': [1316, 1672, 1760, 1376, 1630, 930, 1316, 1574, 2068, 846, 948, 2153, 2068, 1513],
-'location': ['Downtown', 'Suburb', 'Downtown', 'Suburb', 'Downtown', 'Suburb', 
-             'Downtown', 'Suburb', 'Downtown', 'Suburb', 'Downtown', 'Suburb', 'Downtown', 'Suburb'],
-'price': [1240000, 2295000, 1098000, 1445000, 1249888, 1195000,
-        1240000, 1649000, 1299000, 1048000, 1088000, 1890000,
-        1299000, 1250000]
-}
+df = pd.read_csv("random_house_data.csv")
+# Look at the first few rows
+print(df.head())
 #Recorded from San Jose listings on Zillow
-df = pd.DataFrame(house_data)
 # Features and target
 X = df[['square_footage', 'location']]
 y = df['price']
