@@ -4,14 +4,7 @@ from sklearn.cluster import KMeans
 from sklearn.preprocessing import StandardScaler
 import matplotlib.pyplot as plt
 # Generate sample customer data
-data = {
-    'annual_spending': [949, 758, 994, 1256, 729, 729, 1273, 1030, 659, 962, 660, 660, 872, 226, 282],
-    'purchase_frequency': [5, 2, 9, 3, 0, 15, 6, 8, 0, 5, 8, 2, 9, 4, 6],
-    'age': [39, 47, 26, 27, 54, 33, 36, 55, 59, 23, 21, 25, 23, 48, 37],
-    'region': ['South', 'East', 'South', 'South', 'South', 'East', 'South', 'West', 'East', 'West', 'East', 'South', 'West', 'East', 'North']
-}
-#Gemini-randomized 15 data entries
-df = pd.DataFrame(data)
+df = pd.read_csv("random_customer_data.csv")
 # Preprocess data: Select numerical features and scale them
 features = ['annual_spending', 'purchase_frequency', 'age']
 X = df[features]
