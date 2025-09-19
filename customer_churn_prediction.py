@@ -6,16 +6,8 @@ from sklearn.preprocessing import StandardScaler, OneHotEncoder
 from sklearn.compose import ColumnTransformer
 from sklearn.pipeline import Pipeline
 # Generate sample customer data
-data = {
-    'age': [39, 33, 41, 50, 32, 32, 50, 42, 30, 40, 30, 30, 37, 15, 17],
-    'monthly_usage_hours': [21, 14, 34, 16, 8, 51, 26, 31, 8, 21, 31, 12, 35, 20, 25],
-    'purchase_amount': [154, 338, 198, 120, 261, 108, 215, 53, 100, 214, 255, 212, 191, 177, 89],
-    'customer_service_calls': [2, 3, 6, 4, 0, 4, 3, 2, 5, 6, 5, 2, 3, 4, 5],
-    'region': ['South', 'North', 'East', 'West', 'West', 'South', 'East', 'North', 'West', 'East', 'East', 'South', 'West', 'West', 'North'],
-    'churn': [0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0]
-}
-#Gemini randomized data set
-df = pd.DataFrame(data)
+df = pd.read_csv("random_churn_data.csv")
+
 # Features and target
 X = df[['age', 'monthly_usage_hours', 'purchase_amount', 'customer_service_calls',
 'region']]
