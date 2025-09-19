@@ -7,7 +7,7 @@ from sklearn.compose import ColumnTransformer
 from sklearn.pipeline import Pipeline
 # Generate sample customer data
 df = pd.read_csv("random_churn_data.csv")
-
+#ChatGPT Random Dataset Generation
 # Features and target
 X = df[['age', 'monthly_usage_hours', 'purchase_amount', 'customer_service_calls',
 'region']]
