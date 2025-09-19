@@ -7,6 +7,7 @@ from sklearn.compose import ColumnTransformer
 from sklearn.pipeline import Pipeline
 # Generate sample data
 df = pd.read_csv("random_house_data.csv")
+#ChatGPT Random Dataset Generation
 # Look at the first few rows
 print(df.head())
 #Recorded from San Jose listings on Zillow
